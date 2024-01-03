@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTMX test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://unpkg.com/htmx.org@1.9.9/dist/htmx.min.js"></script>
+        <style>
+        body {
+            background-color: #282828;
+            color: #e7e7e7;
+        }
+        </style>
+    </head>
+    <body>
+        <button hx-post="/api/button1" hx-swap="outerHTML">Click Me 1</button>
+        <button hx-post="/api/button2" hx-swap="outerHTML">Click Me 2</button>
+    </body>
+</html>
