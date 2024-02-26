@@ -83,7 +83,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 # convert lists in values to strings
                 query_params = {k: v[0] for k, v in query_params.items()}
                 resp = type(
-                    "Reponse",
+                    "Response",
                     (),
                     {"method": "GET", "params": query_params, "cookies": cookies},
                 )
@@ -152,7 +152,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 cookie.load(cookie_str or "")
                 cookies = {k: v.value for k, v in cookie.items()}
                 resp = type(
-                    "Reponse",
+                    "Response",
                     (),
                     {"method": "POST", "body": post_body, "cookies": cookies},
                 )
